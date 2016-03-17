@@ -1,2 +1,0 @@
-C Program - finds number of partitions
-Perl Script - decomposes h function
