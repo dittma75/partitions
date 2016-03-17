@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=partitions_generating_working_copy
+PROJECTNAME=partitions
 
 # Active Configuration
 DEFAULTCONF=Debug

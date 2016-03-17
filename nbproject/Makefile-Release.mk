@@ -35,12 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/distinct.o \
 	${OBJECTDIR}/h_function_generator.o \
-	${OBJECTDIR}/h_sign_generator.o \
 	${OBJECTDIR}/least_part_m.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/parts_less_than_equal_to_m.o \
 	${OBJECTDIR}/unrestricted_partition.o
 
 
@@ -62,26 +59,16 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partitions_generating_working_copy.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partitions.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partitions_generating_working_copy.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partitions.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partitions_generating_working_copy ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/distinct.o: distinct.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/distinct.o distinct.c
+	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partitions ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/h_function_generator.o: h_function_generator.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/h_function_generator.o h_function_generator.c
-
-${OBJECTDIR}/h_sign_generator.o: h_sign_generator.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/h_sign_generator.o h_sign_generator.c
 
 ${OBJECTDIR}/least_part_m.o: least_part_m.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -92,11 +79,6 @@ ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
-
-${OBJECTDIR}/parts_less_than_equal_to_m.o: parts_less_than_equal_to_m.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/parts_less_than_equal_to_m.o parts_less_than_equal_to_m.c
 
 ${OBJECTDIR}/unrestricted_partition.o: unrestricted_partition.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -109,7 +91,7 @@ ${OBJECTDIR}/unrestricted_partition.o: unrestricted_partition.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partitions_generating_working_copy.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/partitions.exe
 
 # Subprojects
 .clean-subprojects:

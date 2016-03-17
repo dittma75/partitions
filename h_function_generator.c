@@ -1,15 +1,26 @@
+/* 
+ * File:   h_function_generator.c
+ * Author: Kevin Dittmar
+ *
+ * Created on July 8, 2014
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 #include "h_function_generator.h"
 
-/*Pre:  1 <= m <= n
- *Generate a function_tree.txt file that the rest of the
- *program can use to count the number of partitions.
+/* Pre:  1 <= m <= n
+ * Generate a function_tree.txt file that the rest of the
+ * program can use to count the number of partitions.
+ * 
+ * int m is the least part of the partition
+ * int n is the number to partition
+ * 
+ * return EXIT_SUCCESS if completed successfully, EXIT_FAILURE otherwise
  */
 //O(3nlog_4(n))
-int h_function_generator(int m, int n)
+int hFunctionGenerator(int m, int n)
 {
     FILE *file;
     double epsilon = .000001;
@@ -111,14 +122,14 @@ int h_function_generator(int m, int n)
                  *12;13;14;15;
                  *Numbers 3, 4, 5, 7, 8, 10, 11, and 12 cancel with each other.
                  */
-                if (double_mod(counter, 16.0, 3.0) ||
-                    double_mod(counter, 16.0, 4.0) ||
-                    double_mod(counter, 16.0, 5.0) ||
-                    double_mod(counter, 16.0, 7.0) ||
-                    double_mod(counter, 16.0, 8.0) ||
-                    double_mod(counter, 16.0, 10.0) ||
-                    double_mod(counter, 16.0, 11.0) ||
-                    double_mod(counter, 16.0, 12.0))
+                if (doubleModCheck(counter, 16.0, 3.0) ||
+                    doubleModCheck(counter, 16.0, 4.0) ||
+                    doubleModCheck(counter, 16.0, 5.0) ||
+                    doubleModCheck(counter, 16.0, 7.0) ||
+                    doubleModCheck(counter, 16.0, 8.0) ||
+                    doubleModCheck(counter, 16.0, 10.0) ||
+                    doubleModCheck(counter, 16.0, 11.0) ||
+                    doubleModCheck(counter, 16.0, 12.0))
                 {
                     fprintf(file, "0;");
                 }
@@ -147,22 +158,38 @@ int h_function_generator(int m, int n)
     return (EXIT_SUCCESS);
 }
 
-double log_4(int x)
+/*
+ * Use law of changing bases to find log base 4 of x
+ * int x is the number to take log base 4 of.
+ * return log_4(x)
+ */
+double log4(int x)
 {
     return (log(x) / log(4));
 }
 
-/* Function from:
+/* 
+ * Function from:
  * http://stackoverflow.com/questions/1944119/what-is-the-fastest-way-to\
  * -test-if-a-double-number-is-integer-in-modern-intel-x
+ * 
+ * double n is the number to test as an integer
+ * return 1 if it's an integer, 0 otherwise.
  */
 int isInteger(double n)
 {
   return n - (double)(int)n == 0.0;
 }
 
-//returns true if dividend mod divisor has the given remainder.
-int double_mod(double dividend, double divisor, double remainder)
+/* 
+ * This function is used to figure out where in a block of 16 the number
+ * specified by dividend is.
+ * double dividend is the number to divide
+ * double divisor is the number to divide by
+ * double remainder is the remainder that we are expecting after the division.
+ * returns 1 if dividend mod divisor has the given remainder, 0 otherwise
+ */
+int doubleModCheck(double dividend, double divisor, double remainder)
 {
     return isInteger((dividend - remainder) / divisor);
 }

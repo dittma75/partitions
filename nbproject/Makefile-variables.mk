@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=partitions_generating_working_copy
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/partitions_generating_working_copy
+CND_ARTIFACT_NAME_Debug=partitions
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/partitions
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=partitionsgeneratingworkingcopy.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/partitionsgeneratingworkingcopy.tar
+CND_PACKAGE_NAME_Debug=partitions.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/partitions.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=partitions_generating_working_copy
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/partitions_generating_working_copy
+CND_ARTIFACT_NAME_Release=partitions
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/partitions
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=partitionsgeneratingworkingcopy.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/partitionsgeneratingworkingcopy.tar
+CND_PACKAGE_NAME_Release=partitions.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/partitions.tar
 #
 # include compiler specific variables
 #

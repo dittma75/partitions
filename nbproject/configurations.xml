@@ -4,11 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>distinct.h</itemPath>
       <itemPath>h_function_generator.h</itemPath>
-      <itemPath>h_sign_generator.h</itemPath>
       <itemPath>least_part_m.h</itemPath>
-      <itemPath>parts_less_than_equal_to_m.h</itemPath>
       <itemPath>unrestricted_partition.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -18,12 +15,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>distinct.c</itemPath>
       <itemPath>h_function_generator.c</itemPath>
-      <itemPath>h_sign_generator.c</itemPath>
       <itemPath>least_part_m.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>parts_less_than_equal_to_m.c</itemPath>
       <itemPath>unrestricted_partition.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -54,27 +48,15 @@
           <commandLine>-lgmp</commandLine>
         </linkerTool>
       </compileType>
-      <item path="distinct.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="distinct.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="h_function_generator.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="h_function_generator.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="h_sign_generator.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="h_sign_generator.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="least_part_m.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="least_part_m.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="parts_less_than_equal_to_m.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="parts_less_than_equal_to_m.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="unrestricted_partition.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -101,27 +83,15 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="distinct.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="distinct.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="h_function_generator.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="h_function_generator.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="h_sign_generator.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="h_sign_generator.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="least_part_m.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="least_part_m.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="parts_less_than_equal_to_m.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="parts_less_than_equal_to_m.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="unrestricted_partition.c" ex="false" tool="0" flavor2="0">
       </item>

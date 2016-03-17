@@ -7,10 +7,10 @@
 
 #ifndef H_FUNCTION_GENERATOR_H
 #define	H_FUNCTION_GENERATOR_H
-int h_function_generator(int, int);
-double log_4(int);
+int hFunctionGenerator(int, int);
+double log4(int);
 int isInteger(double);
-int double_mod(double, double, double);
+int doubleModCheck(double, double, double);
 #ifdef	__cplusplus
 extern "C" {
 #endif

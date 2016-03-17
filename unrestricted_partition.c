@@ -1,3 +1,9 @@
+/* 
+ * File:   unrestricted_partition.c
+ * Author: Kevin Dittmar
+ *
+ * Created on July 8, 2014
+ */
 #include <stdio.h>
 #include <gmp.h>
 #include "unrestricted_partition.h"
@@ -40,13 +46,21 @@ void generate()
     }
 }
 
-//Return the pentagonal number corresponding to k.
+/*
+ * Get the kth pentagonal number.
+ * int k is the k we are referring to when we say "kth pentagonal number"
+ * return the kth pentagonal number.
+ */
 int pentagonal(int k)
 {
     return k * ((3 * k) - 1) / 2;
 }
 
-//Return the number of unrestricted partitions of n.
+/*
+ * mpz_t out is the GMP integer number of unrestricted partitions for n
+ * int n is the number to partition
+ * return the number of unrestricted partitions of n.
+ */
 void unrestricted_partition(mpz_t out, int n)
 {
     int sign_counter = 0;
@@ -98,12 +112,14 @@ void unrestricted_partition(mpz_t out, int n)
  * sign is positive.
  * However, since the counter is incremented for every two pentagonal numbers
  * generated, the division by 2 is not necessary.
+ * 
+ * int counter is the number of the pentagonal number whose sign is to be
+ * determined
  */
 int isPositive(int counter)
 {
     if (counter % 2)
     {
-        //return -1;
         return 0;
     }
     else
