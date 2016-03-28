@@ -11,14 +11,12 @@
 #include <gmp.h>
 
 #include "least_part_m.h"
-#include "h_function_generator.h"
-#include "unrestricted_partition.h"
 mpz_t cache[1000000];
 int main(int argc, char** argv) 
 {
     if (argc != 3)
     {
-        printf("Usage: partitions_generating_working_copy.exe m n");
+        printf("Usage: partitions.exe m n");
         exit(EXIT_FAILURE);
     }
     printf("m= %s; n = %s\n", argv[1], argv[2]);
@@ -26,7 +24,6 @@ int main(int argc, char** argv)
     mpz_init(result);
     //generate();
     //Set args under Run/Set Project Configuration/Customize.../Run/Run Command 
-    hFunctionGenerator(atoi(argv[1]), atoi(argv[2]));
     h(result, atoi(argv[1]) , atoi(argv[2]));
     gmp_printf("%Zd\n", result);
     return (EXIT_SUCCESS);

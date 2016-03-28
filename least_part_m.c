@@ -11,6 +11,7 @@
 #include <string.h>
 #include <gmp.h>
 #include "least_part_m.h"
+#include "h_function_generator.h"
 
 mpz_t cache[50][20000];
 int is_loaded[50];
@@ -70,6 +71,7 @@ void h(mpz_t result, int m, int n)
     //Sum of base case partitions after decomposition.
     else
     {
+        hFunctionGenerator(m, n);
         //Can be decomposed into parts through the recurrence relation, or
         //is already in the form h(1,n).
         FILE *function_file;

@@ -140,8 +140,9 @@ int hFunctionGenerator(int m, int n)
                 counter++;
             }
         }
-        /*When there are exactly 8 numbers (this loop only fires if numbers > 4),
-         *the fifth number will cancel with the fourth.
+        /* When there are exactly 8 numbers 
+         * (this loop only fires if numbers > 4),
+         * the fifth number will cancel with the fourth.
          */
         else
         {
@@ -168,12 +169,7 @@ double log4(int x)
     return (log(x) / log(4));
 }
 
-/* 
- * Function from:
- * http://stackoverflow.com/questions/1944119/what-is-the-fastest-way-to\
- * -test-if-a-double-number-is-integer-in-modern-intel-x
- * 
- * double n is the number to test as an integer
+/* double n is the number to test as an integer
  * return 1 if it's an integer, 0 otherwise.
  */
 int isInteger(double n)
