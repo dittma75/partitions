@@ -24,7 +24,6 @@
       </nativedebugger>
       <runprofile version="9">
         <runcommandpicklist>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" 6 1000</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 7 1000</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 8 1000</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 9 1000</runcommandpicklistitem>
@@ -34,8 +33,9 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" 14 1000</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 1 1000</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 15 1000</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" 4 25</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" 15 1000</runcommand>
+        <runcommand>"${OUTPUT_PATH}" 4 25</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <console-type>2</console-type>

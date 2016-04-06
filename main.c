@@ -11,6 +11,7 @@
 #include <gmp.h>
 
 #include "least_part_m.h"
+#include "unrestricted_partition.h"
 mpz_t cache[1000000];
 int main(int argc, char** argv) 
 {
@@ -22,8 +23,7 @@ int main(int argc, char** argv)
     printf("m= %s; n = %s\n", argv[1], argv[2]);
     mpz_t result;
     mpz_init(result);
-    //generate();
-    //Set args under Run/Set Project Configuration/Customize.../Run/Run Command 
+    generate();
     h(result, atoi(argv[1]) , atoi(argv[2]));
     gmp_printf("%Zd\n", result);
     return (EXIT_SUCCESS);

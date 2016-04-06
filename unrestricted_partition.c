@@ -5,13 +5,15 @@
  * Created on July 8, 2014
  */
 #include <stdio.h>
+#include <stdlib.h>
 #include <gmp.h>
 #include "unrestricted_partition.h"
 #include "least_part_m.h"
-
+#define TOTAL_SIZE 1000000
+#define TRUE 1
+#define FALSE 0
 const int CHUNK_SIZE = 20000;
-const int TOTAL_SIZE = 1000000;
-mpz_t p_array[1000000];
+mpz_t p_array[TOTAL_SIZE];
 /*Generate the p(n) cache array from 0-999999.  It just so happens that this
  *corresponds to h(1,n) from 1-1000000.
  */
@@ -19,30 +21,51 @@ void generate()
 {
     mpz_init(p_array[0]);
     FILE *file;
+    int is_cache_generated = TRUE;
+    char* name = "cachedir/h_cache_";
+    char* extension = ".txt";
+    char filename[32];
     for (int i = 0; i < TOTAL_SIZE / CHUNK_SIZE; i++)
     {
-        char* name = "cachedir/h_cache_";
-        char* extension = ".txt";
-        char filename[32];
         sprintf(filename, "%s%d%s", name, i, extension);
-        file = fopen(filename, "w");
-        if (file != NULL)
+        file = fopen(filename, "r");
+        if (file == NULL)
         {
-            for (int n = (CHUNK_SIZE * i); n < (CHUNK_SIZE * (i + 1)); n++)
-            {   
-                mpz_init(p_array[n]);
-                if (n == 0)
-                {
-                    mpz_set_ui(p_array[0], 1);
-                }
-                else
-                {
-                    unrestricted_partition(p_array[n], n);
-                }
-                gmp_fprintf(file, "%Zd\n", p_array[n]);
-            }
+            is_cache_generated = FALSE;
+            break;
         }
         fclose(file);
+    }
+    
+    if (is_cache_generated == FALSE)
+    {
+        for (int i = 0; i < TOTAL_SIZE / CHUNK_SIZE; i++)
+        {    
+            sprintf(filename, "%s%d%s", name, i, extension);
+            file = fopen(filename, "w");
+            if (file != NULL)
+            {
+                for (int n = (CHUNK_SIZE * i); n < (CHUNK_SIZE * (i + 1)); n++)
+                {   
+                    mpz_init(p_array[n]);
+                    if (n == 0)
+                    {
+                        mpz_set_ui(p_array[0], 1);
+                    }
+                    else
+                    {
+                        unrestricted_partition(p_array[n], n);
+                    }
+                    gmp_fprintf(file, "%Zd\n", p_array[n]);
+                }
+            }
+            else
+            {
+                printf("Failed to write cache file %d", i);
+                exit(EXIT_FAILURE);
+            }
+            fclose(file);
+        }
     }
 }
 
