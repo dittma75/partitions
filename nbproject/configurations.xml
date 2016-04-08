@@ -72,6 +72,7 @@
       <compileType>
         <cTool>
           <developmentMode>5</developmentMode>
+          <standard>3</standard>
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
@@ -82,6 +83,9 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <commandLine>-lgmp</commandLine>
+        </linkerTool>
       </compileType>
       <item path="h_function_generator.c" ex="false" tool="0" flavor2="0">
       </item>
