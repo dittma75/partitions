@@ -15,7 +15,7 @@ The program will generate this file with the correct value at runtime.
 partitions.exe is the executable of the program that calculates h(m,n) for
 given values.
 
-Usage:  partitions.exe <m> <n>
+Usage:  partitions.exe m n
 
 where m is the least part to use for the partition and n is the number to
 partition.
@@ -23,3 +23,5 @@ It is highly suggested that no m larger than 15 is used.  For
 non-trivial computations, this calculation takes about 30 minutes on the
 previously mentioned machine, and every increase to m doubles the amount
 of time taken.
+
+Do not remove any of the DLLs.  They are necessary for the program to run.
