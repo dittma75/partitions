@@ -84,6 +84,34 @@
           <developmentMode>5</developmentMode>
         </asmTool>
         <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>argp.dll</linkerLibLibItem>
+            <linkerLibLibItem>automode</linkerLibLibItem>
+            <linkerLibLibItem>bash.dll</linkerLibLibItem>
+            <linkerLibLibItem>bfd</linkerLibLibItem>
+            <linkerLibLibItem>binmode</linkerLibLibItem>
+            <linkerLibLibItem>c</linkerLibLibItem>
+            <linkerLibLibItem>cygwin</linkerLibLibItem>
+            <linkerLibLibItem>dl</linkerLibLibItem>
+            <linkerLibLibItem>g</linkerLibLibItem>
+            <linkerLibLibItem>gmon</linkerLibLibItem>
+            <linkerLibLibItem>gmp.dll</linkerLibLibItem>
+            <linkerLibLibItem>gmpxx.dll</linkerLibLibItem>
+            <linkerLibLibItem>iberty</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+            <linkerLibLibItem>mpc.dll</linkerLibLibItem>
+            <linkerLibLibItem>mpfr.dll</linkerLibLibItem>
+            <linkerLibLibItem>opcodes</linkerLibLibItem>
+            <linkerLibLibItem>pthread</linkerLibLibItem>
+            <linkerLibLibItem>python2.7.dll</linkerLibLibItem>
+            <linkerLibLibItem>resolv</linkerLibLibItem>
+            <linkerLibLibItem>rt</linkerLibLibItem>
+            <linkerLibLibItem>textmode</linkerLibLibItem>
+            <linkerLibLibItem>textreadmode</linkerLibLibItem>
+            <linkerLibLibItem>tz</linkerLibLibItem>
+            <linkerLibLibItem>util</linkerLibLibItem>
+            <linkerLibLibItem>uuid.dll</linkerLibLibItem>
+          </linkerLibItems>
           <commandLine>-lgmp</commandLine>
         </linkerTool>
       </compileType>

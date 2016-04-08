@@ -55,7 +55,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-largp.dll -lautomode -lbash.dll -lbfd -lbinmode -lc -lcygwin -ldl -lg -lgmon -lgmp.dll -lgmpxx.dll -liberty -lm -lmpc.dll -lmpfr.dll -lopcodes -lpthread -lpython2.7.dll -lresolv -lrt -ltextmode -ltextreadmode -ltz -lutil -luuid.dll
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
